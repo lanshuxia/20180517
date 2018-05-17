@@ -35,7 +35,7 @@ ul,li{
     height:100%;
     float: left;
     padding:0.2rem 0;
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid #d8d8d8;
 }
 .orderList_right li{
     height:100%;
@@ -52,8 +52,8 @@ ul,li{
     overflow: hidden;
 }
 .list_type .list_type_time{
-    font-size:20px;
-    color:#ccc;
+    font-size:18px;
+    color:#999;
 }
 .list_price{
     width:32%;

@@ -69,13 +69,15 @@ $(function(){
             $.each(data.data.ordersGoods,function(index,item){
                 var order = '<ul>' +
                     '<li class="goodList_img">' +
-                        '<img src="'+item.url+'" alt="">' +
+                        '<img src="img/orange_juice.jpg" alt="">' +
                     '</li>' +
                     '<li class="goodList_details">' +
                         '<p class="goodList_pirce">￥'+item.price+'</p>' +
-                        '<p class="goodList_title">'+item.goodsName+'</p>' +
+                        '<div>' +
+                            '<p class="goodList_title">'+item.goodsName+'</p>' +
+                            '<p class="goodList_count">x'+item.count+'</p>' +
+                        '</div>' +
                         '<p class="goodList_time">'+item.startTime+'</p>' +
-                        '<p class="goodList_count">数量：'+item.count+'</p>' +
                     '</li>' +
                     '</ul>'
                 $('.goodList_con').append(order)
@@ -91,6 +93,6 @@ $(function(){
     getOrder()
 
     $('.goodList_btn').click(function(){
-        window.location.href = '../orderDetail.html'
+        window.location.href = 'orderDetail.html'
     })
 })

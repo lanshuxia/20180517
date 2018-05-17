@@ -112,15 +112,15 @@ $(function(){
         //goods商品
             data.data.goods.forEach(function(item,index){
                 var list = '<li>' +
-                    '<img src="'+item.thumbnailUrl+'" alt="">' +
+                    '<img src="img/coffee.jpg" alt="">' +
                     '<p class="products_list_tip">'+item.goodsName+'</p>' +
                     '<div>' +
                     '<span>￥</span>' +
                     '<span class="price">'+item.price+'</span>' +
                     '<span class="computer">' +
-                    '<span class="decrement">-</span>' +
+                    '<span class="decrement"><img src="img/minus.png" alt=""></span>' +
                     '<input type="number" class="number" value="0">' +
-                    '<span class="increment">+</span>' +
+                    '<span class="increment"><img src="img/add_01.png" alt=""></span>' +
                     '</span>' +
                     '</div>' +
                     '</li>'
@@ -129,15 +129,15 @@ $(function(){
         //数据线
             data.data.fgs.forEach(function(item){
                 var list = '<li>' +
-                    '<img src="'+item.url+'" alt="">' +
+                    '<img src="img/line.png" alt="">' +
                     '<p class="products_list_tip">'+item.goodsName+'</p>' +
                     '<div>' +
                     '<span>￥</span>' +
                     '<span class="price">'+item.price+'</span>' +
                     '<span class="computer">' +
-                    '<span class="decrement">-</span>' +
+                    '<span class="decrement"><img src="img/minus.png" alt=""></span>' +
                     '<input type="number" class="number" value="0">' +
-                    '<span class="increment">+</span>' +
+                    '<span class="increment"><img src="img/add_01.png" alt="" id="img_add"></span>' +
                     '</span>' +
                     '</div>' +
                     '</li>'
@@ -221,7 +221,7 @@ $(function(){
         $('.decrement').hide();
         $('.list_con').delegate(".increment", "click", function () {
             clearTimeout( timer1 );
-            $(this).css('background','#02acc9');
+            $(this).children().attr('src','img/add_02.png');
             $(this).parent('.computer').find('.number').show();
             $(this).parent('.computer').find('.decrement').show();
             $('.footer_con').show();
@@ -260,8 +260,8 @@ $(function(){
                 alert(1)
                 $(this).parent('.computer').children('input').val(0);
                 ($(this).parent('.computer').children('input') ).css('display','none');
-                ($(this).parent('.computer').children('.increment') ).css('background','#999');
-                $(this).css('display','none');
+                ($(this).parent('.computer').children('.increment').find('img') ).attr('src','img/add_01.png');
+                $(this).hide();
                 $('.footer_con').hide();
             } else {
                 $(this).parent('.computer').children('input').val($(this).parent('.computer').children('input').val() * 1 - 1)
@@ -286,6 +286,6 @@ $(function(){
     decrement()
 
     $('.footer_pay').click(function(){
-        window.location.href = '../goodList.html'
+        window.location.href = 'goodList.html'
     })
 })

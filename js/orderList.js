@@ -130,8 +130,8 @@ $(function(){
                         '</div>' +
                         '<ul class="orderList_right">' +
                         '<li class="list_type">' +
-                            '<p class="list_type_type">商品/数据线/饮品</p>' +
-                            '<p class="list_type_time" style="font-size:18px;">'+item.orderNumber+'</p>' +
+                            '<p class="list_type_type">'+item.orderType+'</p>' +
+                            '<p class="list_type_time">'+item.orderNumber+'</p>' +
                         '</li>' +
                         '<li class="list_price">￥'+item.total+'</li>' +
                         '<li class="list_stats">'+item.stats+'</li>' +

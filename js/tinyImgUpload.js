@@ -131,7 +131,7 @@ function tinyImgUpload(ele, options) {
     return uploadImg();
 
 
-    var imgContainer = document.getElementById('img-container');
+/*    var imgContainer = document.getElementById('img-container');
     imgContainer.addEventListener('touchstart',function(){
         gtouchstart()
     })
@@ -168,7 +168,7 @@ function tinyImgUpload(ele, options) {
         timeOutEvent = 0;
         //执行长按要执行的内容，如弹出菜单
         alert("长按事件触发发");
-    }
+    }*/
 }
 
 
